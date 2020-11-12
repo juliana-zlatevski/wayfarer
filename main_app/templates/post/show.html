@@ -7,8 +7,10 @@
 {% block content %}
     <img src="{{ post.city.photo.cdn_url }}">
     <h4>{{ post.title }}</h4>
-    <p>{{ post.content }}</p>
-    <p>submitted by <a href="{% url 'user_profile' post.user.id %}">{{ post.user }}</a> on {{ post.timestamp }}</p>
+    <p>{{ post.timestamp }}</p>
+    <h5>"{{ post.content }}"</h5>
+    <img class="avatar" src="{{ post.user.profile.avatar.cdn_url }}-/resize/100x100/ }}">
+    <p>submitted by <a href="{% url 'user_profile' post.user.id %}">{{ post.user }}</a></p>
     <p>See more posts about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
         
 {% endblock %}

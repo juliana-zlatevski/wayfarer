@@ -24,6 +24,8 @@
       <div class="card">
           <div class="card-content">
             <a href="{% url 'view_post' post.id %}">
+            <p>{{ post.user.profile.name }}</p>
+            <img class="avatar" src="{{ post.user.profile.avatar.cdn_url }}-/resize/100x100/">
               <p>{{ post.title }}</a> by {{ post.user }}</p>
             </a>
           </div>
