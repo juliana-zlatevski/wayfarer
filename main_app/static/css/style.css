@@ -5,3 +5,29 @@
 .avatar {
     border-radius: 50%;
 }
+
+#header-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.header-title {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.404);
+    line-height: 140px;
+    text-align: center;
+    margin-top: 210px;
+    font-size: 6em;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.yo {
+    background-color: transparent;
+    box-shadow: none;
+    font-family: menlo;
+}
