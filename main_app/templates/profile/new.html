@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block title %} 
+Account Setup 
+{% endblock %} 
+
+{% block content %}
+<h1>Almost done!</h1>
+<h5>Please finish setting your account up below:</h5>
+
+{{ form.media }}
+
+  <form method="POST" action="{% url 'new_profile' %}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" class="btn" value="Create Profile"> 
+  </form>
+
+{% endblock %}

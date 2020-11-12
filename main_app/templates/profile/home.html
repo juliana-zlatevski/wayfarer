@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ user.username }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col s4">
+      <div class="card">
+          <div class="card-content">
+          <img src="{{ profile.avatar.cdn_url }}-/resize/200x200/">
+            <h3>{{ profile.name }}</h3>
+            <p>Current city: {{profile.current_city}}</p>
+            <p>Joined: {{ profile.join_date }}</p>
+          <div>
+            <a href="{% url 'edit_profile' profile.id %}" type="submit" class="btn-small">
+          Edit Profile</a>
+            </div>
+          </div>
+      </div>
+      </div>
+  
+  <div class="col s8">
+      <h5 class="profile-posts-header">Posts by {{ profile.name }}</h5>
+      <div class="card">
+        <div class="card-content">
+        <ol>
+          {% for post in posts %}
+          <li><a href="{% url 'view_post' post.id %}">
+            <p>{{ post.title }}</p>
+          </a></li>
+          {% endfor %}
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
