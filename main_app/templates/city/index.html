@@ -8,8 +8,10 @@ Cities
 
 <h1>Cities</h1>
 
+<div class="row">
 {% for city in cities %}
-  <div class="card">
+  <div class="col s3">
+  <div class="card city-index-card">
     <a href="{% url 'view_city' city.id %}">
       <div class="card-content">
           <img class="city-img" src="{{ city.photo.cdn_url }}">
@@ -17,6 +19,7 @@ Cities
       </div>
     </a>
   </div>
+</div>
 {% endfor %}
-
+</div>
 {% endblock %}

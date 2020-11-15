@@ -1,5 +1,9 @@
+body {
+    background-color: #111111;
+}
+
 .city-img {
-    width: 400px;
+    width: 80%;
 }
 
 .avatar {
@@ -10,24 +14,66 @@
     position: fixed;
     right: 0;
     bottom: 0;
+    max-width: 1500px;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
 }
 
 .header-title {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.404);
-    line-height: 140px;
+    font-family: 'Oswald', sans-serif;
+    color: #efefef;
+    line-height: 130px;
     text-align: center;
-    margin-top: 210px;
-    font-size: 6em;
-    font-weight: 100;
+    margin-top: 20%;
+    font-size: 154px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
-.yo {
+.navigation {
     background-color: transparent;
     box-shadow: none;
-    font-family: menlo;
+}
+
+.nav-link {
+    color: #DDDDDD;
+    font-family: 'PT Mono', monospace;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    background-color: transparent;
+    color: orange;
+}
+
+#pls {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFF700;
+}
+
+#pls:hover {
+    background-color: transparent;
+}
+
+.city-index-card {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+}
+
+.card {
+     border: 1px solid efefef !important;
+     border-radius: 20% !important;
+     background-color: transparent !important;
+     box-shadow: none !important;
+}
+
+.card-content {
+     text-align: center;
 }

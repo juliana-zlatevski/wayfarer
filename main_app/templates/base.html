@@ -5,22 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block title %}{% endblock %} | WayFarer</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gravitas+One&family=Old+Standard+TT&family=Oswald:wght@200;700&family=PT+Mono&display=swap" rel="stylesheet">
+
+  <!-- CUSTOM STYLESHEET -->
   <link rel="stylesheet" href="/static/css/style.css">
+
+  <!-- MATERIALIZE CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 <body>
   <header>
-    <nav class="yo">
+    <nav class="navigation">
       <div class="nav-wrapper">
         <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;WayFarer</a></li>
+          <li><a href="/" id="pls" class="left brand-logo">&nbsp;WAYFARER</a></li>
         </ul>
         <ul class="right">
             {% if user.is_authenticated %}
-                <li><a href="{% url 'cities' %}">Cities</a></li>
-                <li><a href="{% url 'profile' %}">{{ user.username }}</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <li><a class="nav-link" href="{% url 'cities' %}">Cities</a></li>
+                <li><a class="nav-link" href="{% url 'profile' %}">{{ user.username }}</a></li>
+                <li><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
 
             {% else %}
                 <li><a href="{% url 'login' %}">Login</a></li>
@@ -34,5 +42,7 @@
     {% block content %}
     {% endblock %}
   </main>
+  <!-- MATERIALIZE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
