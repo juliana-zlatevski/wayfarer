@@ -5,21 +5,20 @@ Cities
 {% endblock %}
 
 {% block content %}
-
-<h1>Cities</h1>
-
-<div class="row">
-{% for city in cities %}
-  <div class="col s6">
-  <div class="card city-index-card">
-    <a href="{% url 'view_city' city.id %}">
-      <div class="card-content">
-          <img class="city-img" src="{{ city.photo.cdn_url }}">
-          <span class="card-title">{{ city.name }}</span>
-      </div>
-    </a>
+<div class="city-box">
+  <div class="left-city-box">
+      <h1 class="cities-header">Go far.</h1>
   </div>
-</div>
+
+  <div class="right-city-box">
+{% for city in cities %}
+  <div class="right-city-box2">
+    <a href="{% url 'view_city' city.id %}">
+          <img class="city-img" src="{{ city.photo.cdn_url }}">
+          <span class="city-name">{{ city.name }}</span>
+    </a>
+    </div>
 {% endfor %}
+  </div>
 </div>
 {% endblock %}

@@ -3,7 +3,8 @@ body {
 }
 
 .city-img {
-    width: 80%;
+    width: 50%;
+    
 }
 
 .avatar {
@@ -42,7 +43,7 @@ body {
     font-family: 'PT Mono', monospace;
     font-weight: lighter;
     letter-spacing: 5px;
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
     margin-top: 15px;
     padding: 5px;
@@ -52,8 +53,8 @@ body {
     background-color: transparent;
     color: #011F40;
     font-size: 20px;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    letter-spacing: 1.5px;
+    transition: 0.4s;
 }
 
 #pls {
@@ -85,4 +86,44 @@ body {
 
 .card-content {
      text-align: center;
+}
+
+.city-box {
+    /* border: 3px solid red; */
+    padding: 25px;
+    width: 100%;
+}
+
+.left-city-box {
+    /* border: 3px solid green; */
+    width: 30%;
+    float: left;
+    margin-top: 20%;
+}
+
+.right-city-box {
+    /* border: 3px solid yellow; */
+    width: 70%;
+    float: right;
+}
+
+.cities-header {
+    font-size: 100px;
+}
+
+.right-city-box2 {
+    position: relative;
+}
+
+.city-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    color: #efefef;
+    background-color: rgba(0, 0, 0, 0.521);
+    line-height: 60px;
+    text-transform: uppercase;
 }
