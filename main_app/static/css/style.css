@@ -1,5 +1,5 @@
 body {
-    background-color: #111111;
+    background-color: #fff;
 }
 
 .city-img {
@@ -34,31 +34,44 @@ body {
 .navigation {
     background-color: transparent;
     box-shadow: none;
+    padding-right: 75px;
 }
 
 .nav-link {
-    color: #DDDDDD;
+    color: #011F40;
     font-family: 'PT Mono', monospace;
     font-weight: lighter;
     letter-spacing: 5px;
     font-size: 13px;
     text-transform: uppercase;
+    margin-top: 15px;
+    padding: 5px;
 }
 
 .nav-link:hover {
     background-color: transparent;
-    color: orange;
+    color: #011F40;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 #pls {
-    font-family: 'Oswald', sans-serif;
-    font-size: 48px;
+    font-family: 'PT Mono', monospace;
+    font-size: 38px;
     font-weight: bold;
-    color: #FFF700;
+    color: #011F40;
+    margin-left: 75px;
+    margin-top: 15px;
 }
 
 #pls:hover {
     background-color: transparent;
+    font-family: 'PT Mono', monospace;
+    /* font-size: 28px; */
+    letter-spacing: 5px;
+    color: #011F40;
+    transition: 0.6s;
 }
 
 .city-index-card {
