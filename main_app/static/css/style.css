@@ -4,7 +4,10 @@ body {
 
 .city-img {
     width: 50%;
-    
+}
+
+.city-img:hover {
+    opacity: .9;
 }
 
 .avatar {
@@ -120,10 +123,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-100%, -50%);
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Oswald', sans-serif;
     color: #efefef;
     background-color: rgba(0, 0, 0, 0.521);
-    line-height: 60px;
+    line-height: 30px;
     text-transform: uppercase;
 }
