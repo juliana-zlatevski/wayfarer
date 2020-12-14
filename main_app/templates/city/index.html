@@ -11,6 +11,7 @@ Cities
   </div>
 
   <div class="right-city-box">
+  <div class='city-img-box'>
 {% for city in cities %}
   <div class="right-city-box2">
     <a href="{% url 'view_city' city.id %}">
@@ -19,6 +20,7 @@ Cities
     </a>
     </div>
 {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}
