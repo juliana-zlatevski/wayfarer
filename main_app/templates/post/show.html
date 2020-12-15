@@ -12,20 +12,20 @@
     <div class='post-container'>
     <div class='post-content'>
     <h4 class='post-title-heading'>{{ post.title }}</h4>
-    <h5>"{{ post.content }}"</h5>
+    <h5 class='post-content-text'>"{{ post.content }}"</h5>
     </div>
     <div class='post-content-user-info'>
-    <img class="avatar" src="{{ post.user.profile.avatar.cdn_url }}-/resize/100x100/ }}">
-    <p>submitted by <a href="{% url 'user_profile' post.user.id %}">{{ post.user }}</a></p>
-    <p class='timestamp-light'>{{ post.timestamp }}</p>
+    <img class="avatar" src="{{ post.user.profile.avatar.cdn_url }}-/resize/175x175/ }}">
+    <p class='timestamp-light'>submitted by <a href="{% url 'user_profile' post.user.id %}">{{ post.user }}</a>
+    on {{ post.timestamp }}</p>
     <div class='post-edit-buttons'>
     {% if post.user.id == request.user.id %}
-            <a href="{% url 'edit_post' post.id %}" type="submit">
+            <a href="{% url 'edit_post' post.id %}" type="submit" id='modify-btns'>
               Edit
             </a>
              
             <!-- Modal Trigger -->
-            <a href='#modal'>
+            <a href='#modal' id='modify-btns'>
               Delete
             </a>
     
@@ -41,7 +41,7 @@
               </div>
             </div>
           </div>
-        <p>More about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
+        <p class='timestamp-light'>More about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
           </div>
     {% endif %}
     </div>

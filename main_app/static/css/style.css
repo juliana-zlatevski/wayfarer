@@ -5,6 +5,10 @@ body {
     color: #000;
 }
 
+img {
+    border-radius: 15px;
+}
+
 .city-img {
     width: 50%;
     padding: 5px;
@@ -60,9 +64,10 @@ body {
 
 #brand {
     font-size: 38px;
-    font-weight: bold;
+    font-weight: lighter;
     color: #000;
     margin: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 #brand:hover {
@@ -80,6 +85,14 @@ body {
 .card-content {
      text-align: left;
      padding-bottom: 0 !important;
+}
+
+.card-content a {
+    color: #FF5A5F;
+}
+
+.card-content a:hover {
+    color: #000;
 }
 
 .card-left {
@@ -149,6 +162,7 @@ body {
 .city-show-name {
     padding-top: 5px;
     text-align: center;
+    font-size: 32px;
 }
 
 .timestamp {
@@ -170,18 +184,23 @@ body {
 
 .experiences {
     margin-top: 0;
+    font-size: 24px;
 }
 
 .post-show-city-img {
-    padding-top: 20px;
     width: 100%;
+    border-radius: 15px;
+}
+
+.post-container-city-img {
+    border-radius: 15px;
 }
 
 .post-container {
     position: absolute;
-    top: 32%;
-    left: 15%;
-    width: 70%;
+    top: 20%;
+    left: 20%;
+    width: 60%;
     background-color: rgba(0, 0, 0, 0.705);
     color: white;
     padding: 10px;
@@ -199,6 +218,10 @@ body {
     width: 30%;
     text-align: center;
     padding: 20px;
+}
+
+.post-content-user-info a {
+    color: #ff5a5f;
 }
 
 .timestamp-light {
@@ -219,4 +242,45 @@ body {
 .landing-page-link:hover {
     color: #fefefe;
     transition: 0.4s;
+}
+
+.post-content-text {
+    font-size: 20px; 
+    font-weight: lighter;
+    line-height: 25px;
+}
+
+#modify-btns {
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+}
+
+#modify-btns:hover {
+    color: #ff5a5f;
+}
+
+.experiences-btn {
+    color: black;
+    border: 1px solid #ff5a5f;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.experiences-btn:hover {
+    border: 1px solid #000;
+}
+
+.article-list {
+    margin-top: 40px;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+
+.profile-details {
+    padding-bottom: 20px;
+    width: 80%;
+    font-size: 14px;
+    text-align: left;
 }

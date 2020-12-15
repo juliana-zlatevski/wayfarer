@@ -11,18 +11,18 @@
       <div class="card">
           <div class="card-content">
           <img class="avatar" src="{{ profile.avatar.cdn_url }}-/resize/200x200/">
-            <h3>{{ profile.name }}</h3>
-            <p>Current city: {{profile.current_city}}</p>
-            <p>Joined: {{ profile.join_date }}</p>
+            <h3 class='experiences'>{{ profile.name }}</h3>
+            <p class='profile-details'>location: {{profile.current_city}}<br>
+            joined: {{ profile.join_date }}</p>
           <div>
-            <a href="{% url 'edit_profile' profile.id %}" type="submit" class="btn-small">
+            <a href="{% url 'edit_profile' profile.id %}" type="submit" class="experiences-btn">
           Edit Profile</a>
             </div>
           </div>
       </div>
       </div>
   
-  <div class="col s8">
+  <div class="col s8 article-list">
       <h5 class="profile-posts-header">Your posts:</h5>
       <div class="card">
         <div class="card-content">

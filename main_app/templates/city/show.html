@@ -13,7 +13,7 @@
 
     <div class="city-articles">
         <h2 class='experiences'>experiences</h2>
-          <a href="{% url 'add_post' city.id %}" type="submit" class="btn-small">
+          <a href="{% url 'add_post' city.id %}" type="submit" class="experiences-btn">
           write about {{ city.name }}
           </a>
       {% for post in posts %}
