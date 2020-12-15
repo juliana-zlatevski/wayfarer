@@ -23,42 +23,8 @@
               <p>"{{ post.title }}"</a> by {{ post.user }}</p>
               <p class='timestamp'>{{ post.timestamp }}</p>
             </a>
-
-          {% if request.user == post.user %}
-          <div class="button-box">
-            <!-- Modal Trigger -->
-            <a href="#modal1">
-              Delete
-            </a>
-    
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-              <div class="modal-content">
-                <h4>Delete Post Confirmation</h4>
-                <p>Are you sure you want to delete this post?</p>
-              </div>
-              <div class="modal-footer">
-                <a href="{% url 'delete_post' city.id post.id %}" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-              </div>
-            </div>
-    
-            <a href="{% url 'edit_post' post.id %}" type="submit">
-              Edit
-            </a>
-          </div>
-          {% endif %}
-
-
           </div>
       {% endfor %}
     </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const elems = document.querySelectorAll('.modal');
-      const instances = M.Modal.init(elems);
-    });
-  </script>
 
 {% endblock %}

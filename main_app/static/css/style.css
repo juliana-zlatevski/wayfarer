@@ -43,38 +43,29 @@ body {
 
 .nav-link {
     color: #011F40;
-    font-family: 'PT Mono', monospace;
-    font-weight: lighter;
-    letter-spacing: 5px;
     font-size: 14px;
+    margin: 5px;
     text-transform: uppercase;
-    padding: 5px;
 }
 
 .nav-link:hover {
     background-color: transparent;
-    color: #011F40;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    transition: 0.4s;
+    color: #fff;
+    transition: 0.2s;
 }
 
-#pls {
-    font-family: 'PT Mono', monospace;
+#brand {
     font-size: 38px;
     font-weight: bold;
-    color: #011F40;
-    margin-left: 75px;
-    margin-top: 15px;
+    color: #000;
+    margin: 10px;
 }
 
-#pls:hover {
+#brand:hover {
     background-color: transparent;
-    font-family: 'PT Mono', monospace;
-    /* font-size: 28px; */
-    letter-spacing: 5px;
-    color: #011F40;
+    color: #000;
     transition: 0.6s;
+    margin-left: 20px;
 }
 
 .card {
@@ -173,4 +164,36 @@ body {
 
 .experiences {
     margin-top: 0;
+}
+
+.post-show-city-img {
+    padding-top: 20px;
+    width: 100%;
+}
+
+.post-container {
+    position: absolute;
+    top: 150px;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    padding: 10px;
+}
+
+.post-content {
+    float: left;
+    width: 70%;
+    padding: 20px;
+}
+
+.post-content-user-info {
+    float: right;
+    width: 30%;
+}
+
+.timestamp-light {
+    color: white;
+    font-size: 12px;
 }

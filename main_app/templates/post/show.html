@@ -5,12 +5,51 @@
 {% endblock %} 
 
 {% block content %}
-    <img src="{{ post.city.photo.cdn_url }}">
+<div class='post-container-city-img'>
+    <img class='post-show-city-img' src="{{ post.city.photo.cdn_url }}">
+    </div>
+
+    <div class='post-container'>
+    <div class='post-content'>
     <h4>{{ post.title }}</h4>
-    <p>{{ post.timestamp }}</p>
     <h5>"{{ post.content }}"</h5>
+    </div>
+    <div class='post-content-user-info'>
     <img class="avatar" src="{{ post.user.profile.avatar.cdn_url }}-/resize/100x100/ }}">
     <p>submitted by <a href="{% url 'user_profile' post.user.id %}">{{ post.user }}</a></p>
-    <p>See more posts about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
-        
+    <p class='timestamp-light'>{{ post.timestamp }}</p>
+    <div class='post-edit-buttons'>
+    {% if post.user.id == request.user.id %}
+            <a href="{% url 'edit_post' post.id %}" type="submit">
+              Edit
+            </a>
+             
+            <!-- Modal Trigger -->
+            <a href='#modal'>
+              Delete
+            </a>
+    
+            <!-- Modal Structure -->
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <h4>Delete Post Confirmation</h4>
+                <p>Are you sure you want to delete this post?</p>
+              </div>
+              <div class="modal-footer">
+                <a href="{% url 'delete_post' post.city.id post.user.id %}" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+              </div>
+            </div>
+          </div>
+          </div>
+    {% endif %}
+    </div>
+        <p>See more posts about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elems = document.getElementById('#modal');
+      const instances = M.Modal.init(elems);
+    });
+  </script>  
 {% endblock %}
