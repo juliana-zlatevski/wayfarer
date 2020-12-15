@@ -11,7 +11,7 @@
 
     <div class='post-container'>
     <div class='post-content'>
-    <h4>{{ post.title }}</h4>
+    <h4 class='post-title-heading'>{{ post.title }}</h4>
     <h5>"{{ post.content }}"</h5>
     </div>
     <div class='post-content-user-info'>
@@ -41,10 +41,10 @@
               </div>
             </div>
           </div>
+        <p>More about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
           </div>
     {% endif %}
     </div>
-        <p>See more posts about <a href="{% url 'view_city' post.city.id %}">{{ post.city }}</a>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {

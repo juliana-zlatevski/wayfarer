@@ -9,6 +9,7 @@
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gravitas+One&family=Old+Standard+TT&family=Oswald:wght@200;700&family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- CUSTOM STYLESHEET -->
   <link rel="stylesheet" href="/static/css/style.css">
@@ -31,8 +32,8 @@
                 <li><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
 
             {% else %}
-                <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                <li><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li>
             {% endif %}
         </ul>
       </div>

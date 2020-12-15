@@ -1,10 +1,14 @@
 body {
-    background-color: #fff;
+    background-color: #fefefe;
+    font-family: 'Poppins', sans-serif;
+    font-weight: light;
+    color: #000;
 }
 
 .city-img {
     width: 50%;
-    padding: 2px;
+    padding: 5px;
+    border-radius: 15px;
 }
 
 .city-img:hover {
@@ -30,7 +34,7 @@ body {
     color: #efefef;
     line-height: 130px;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 154px;
     font-weight: 700;
     text-transform: uppercase;
@@ -42,29 +46,29 @@ body {
 }
 
 .nav-link {
-    color: #011F40;
-    font-size: 14px;
+    color: #000;
+    font-size: 16px;
     margin: 5px;
     text-transform: uppercase;
 }
 
 .nav-link:hover {
     background-color: transparent;
-    color: #fff;
-    transition: 0.2s;
+    color: #ff5a5f;
+    transition: 0.4s;
 }
 
 #brand {
     font-size: 38px;
     font-weight: bold;
     color: #000;
-    margin: 10px;
+    margin: 0px;
 }
 
 #brand:hover {
     background-color: transparent;
-    color: #000;
-    transition: 0.6s;
+    color: #ff5a5f;
+    transition: 0.4s;
     margin-left: 20px;
 }
 
@@ -89,18 +93,20 @@ body {
 }
 
 .left-city-box {
-    width: 30%;
+    width: 20%;
     float: left;
-    margin-top: 20%;
+    margin-top: 10%;
+    position: fixed;
 }
 
 .right-city-box {
-    width: 70%;
+    width: 80%;
     float: right;
 }
 
 .cities-header {
     font-size: 100px;
+    line-height: 78px;
 }
 
 .right-city-box2 {
@@ -173,10 +179,9 @@ body {
 
 .post-container {
     position: absolute;
-    top: 150px;
+    top: 32%;
     left: 15%;
     width: 70%;
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.705);
     color: white;
     padding: 10px;
@@ -186,14 +191,32 @@ body {
     float: left;
     width: 70%;
     padding: 20px;
+    text-align: left;
 }
 
 .post-content-user-info {
     float: right;
     width: 30%;
+    text-align: center;
+    padding: 20px;
 }
 
 .timestamp-light {
     color: white;
     font-size: 12px;
+}
+
+.post-title-heading {
+    margin-top: 0;
+}
+
+.landing-page-link {
+    margin-left: 32%;
+    color: #ff5a5f;
+    font-size: 32px;
+}
+
+.landing-page-link:hover {
+    color: #fefefe;
+    transition: 0.4s;
 }
