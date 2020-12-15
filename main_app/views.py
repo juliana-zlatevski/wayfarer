@@ -78,6 +78,7 @@ def cities(request):
 
 # view a post
 def view_post(request, post_id):
+    print(request)
     post = Post.objects.get(id=post_id)
     context = {'post': post}
     return render(request, 'post/show.html', context)
